@@ -5,5 +5,5 @@ var HttpWebHookStatelessSwitchAccessory = require('./src/homekit/accessories/Htt
 module.exports = function(homebridge) {
   homebridge.registerAccessory("homebridge-http-webhooks", "HttpWebHookSwitch", HttpWebHookSwitchAccessory);
   homebridge.registerAccessory("homebridge-http-webhooks", "HttpWebHookPushButton", HttpWebHookPushButtonAccessory);
-   "HttpWebHookStatelessSwitch", HttpWebHookStatelessSwitchAccessory);
+homebridge.registerAccessory("homebridge-http-webhooks", "HttpWebHookStatelessSwitch", HttpWebHookStatelessSwitchAccessory);
 };

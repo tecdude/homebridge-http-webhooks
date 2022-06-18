@@ -28,8 +28,8 @@
   "dependencies": {
     "http-auth": "^3.2.4",
     "node-persist": "2.0.x",
-    "request": "2.87.x",
-    "selfsigned": "^1.10.7"
+    "request": "^2.88.2",
+    "selfsigned": "^2.0.1"
   },
   "homepage": "https://github.com/benzman81/homebridge-http-webhooks#readme",
   "author": "benzman81"
