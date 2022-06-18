@@ -1,11 +1,11 @@
 # homebridge-http-webhooks
-A [Homebridge](https://github.com/nfarina/homebridge) plugin that can post to Discord webhooks.
+A [Homebridge](https://github.com/homebridge/homebridge) plugin that can post to Discord webhooks.
 
 Currently supports switches and push buttons.
 
 # Installation
 1. Install homebridge using: `npm install -g homebridge`
-2. Install this plugin using: `npm install -g homebridge-http-webhooks`
+2. Install this plugin using: `npm install -g homebridge-discord`
 3. Update your configuration file. See sample-config.json snippet below.
 
 # Retrieve state
