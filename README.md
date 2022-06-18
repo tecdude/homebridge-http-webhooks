@@ -158,62 +158,50 @@ For valves/faucets you can call the url from any system to switch the valve on o
 Example config.json:
 ```
     {
-        "platforms": [
-            {
-                "platform": "HttpWebHooks",
-                "webhook_port": "51828",
-                "webhook_listen_host": "::", // (optional, default: "0.0.0.0")
-                "webhook_enable_cors": true, // (optional, default: false)
-                "cache_directory": "./.node-persist/storage", // (optional, default: "./.node-persist/storage")
-                "http_auth_user": "test", // (optional, only if you like to secure your api)
-                "http_auth_pass": "test", // (optional, only if you like to secure your api)
-                "https": true, // (beta state, optional, only if you like to secure your api using ssl certificate)
-                "https_keyfile": "/pathToKeyFile/server.key", // (beta state, optional, only if you like to secure your api using ssl certificate)
-                "https_certfile": "/pathToKeyFile/server.cert", // (beta state, optional, only if you like to secure your api using ssl certificate)
-                "switches": [
-                    {
-                        "id": "switch1",
-                        "name": "Switch name 1",
-                        "rejectUnauthorized": false, // (optional)
-                        "on_url": "your url to switch the switch on", // (optional)
-                        "on_method": "GET", // (optional)
-                        "on_body": "{ \"on\" : true }", // (optional only for POST, PUT and PATCH; use "on_form" for x-www-form-urlencoded JSON)
-                        "on_headers": "{\"Authorization\": \"Bearer ABCDEFGH\", \"Content-Type\": \"application/json\"}", // (optional)
-                        "off_url": "your url to switch the switch off", // (optional)
-                        "off_method": "GET", // (optional)
-                        "off_body": "{ \"on\": false }", // (optional only for POST, PUT and PATCH; use "off_form" for x-www-form-urlencoded JSON)
-                        "off_headers": "{\"Authorization\": \"Bearer ABCDEFGH\", \"Content-Type\": \"application/json\"}" // (optional)
-                    }
-                ],
-                "pushbuttons": [
-                    {
-                        "id": "pushbutton1",
-                        "name": "Push button name 1",
-                        "rejectUnauthorized": false, // (optional)
-                        "push_url": "your url to be called on push", // (optional)
-                        "push_method": "GET", // (optional)
-                        "push_body": "{ \"push\": true }", // (optional only for POST, PUT and PATCH; use "push_form" for x-www-form-urlencoded JSON)
-                        "push_headers": "{\"Authorization\": \"Bearer ABCDEFGH\", \"Content-Type\": \"application/json\"}" // (optional)
-                    }
-                ],
-                "statelessswitches": [
-                    {
-                    "id": "statelessswitch1",
-                    "name": "Stateless Switch 1",
-                    "buttons": [//the buttons of the switch
-                        {
-                            "name": "Button1" // (The name does not appear in Home app but appear in Eve app)
-                        },
-                        {
-                            "name": "Button2", // (The name does not appear in Home app but appear in Eve app)
-                            "double_press": false, // (you can disable a type of action)
-                            "long_press": false
-                        }
-                    ]
-                    }
-                ],
-            }
-        ]
+    	"platforms": [{
+    		"platform": "HttpWebHooks",
+    		"webhook_port": "51828",
+    		"webhook_listen_host": "::",
+    		"webhook_enable_cors": true, 
+    		"cache_directory": "./.node-persist/storage", 
+    		"http_auth_user": "test", 
+    		"http_auth_pass": "test", 
+    		"https": true, 
+    		"https_keyfile": "/pathToKeyFile/server.key", 
+    		"https_certfile": "/pathToKeyFile/server.cert", 
+    			"id": "switch1",
+    			"name": "Switch name 1",
+    			"rejectUnauthorized": false, 
+    			"on_url": "your url to switch the switch on", 
+    			"on_method": "GET",
+    			"on_body": "{ \"on\" : true }",
+    			"on_headers": "{\"Authorization\": \"Bearer ABCDEFGH\", \"Content-Type\": \"application/json\"}", 
+    			"off_url": "your url to switch the switch off", 
+    			"off_method": "GET", 
+    			"off_body": "{ \"on\": false }", 
+    			"off_headers": "{\"Authorization\": \"Bearer ABCDEFGH\", \"Content-Type\": \"application/json\"}" 
+    		}],
+    		"pushbuttons": [{
+    			"id": "pushbutton1",
+    			"name": "Push button name 1",
+    			"rejectUnauthorized": false,
+    			"push_url": "your url to be called on push", 
+    			"push_method": "GET", 
+    			"push_body": "{ \"push\": true }",
+    			"push_headers": "{\"Authorization\": \"Bearer ABCDEFGH\", \"Content-Type\": \"application/json\"}" 
+    		}],
+    		"statelessswitches": [{
+    			"id": "statelessswitch1",
+    			"name": "Stateless Switch 1",
+    			"buttons": [ 
+    				{
+    					"name": "Buttonq", 
+    					"double_press": false,
+    					"long_press": false
+    				}
+    			]
+    		}
+            ]
     }
 ```
 
