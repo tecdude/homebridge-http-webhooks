@@ -66,56 +66,6 @@
         "placeholder": "/pathToKeyFile/server.cert",
         "required": false
       },
-      "sensors": {
-        "type": "array",
-        "title": "Sensors",
-        "description": "Create contact, motion, occupancy, smoke, temperature, humidity, airquality, light, or leak sensors.",
-        "items": {
-          "title": "Sensors",
-          "type": "object",
-          "properties": {
-            "id": {
-              "title": "ID",
-              "type": "string",
-              "placeholder": "sensor1",
-              "required": false
-            },
-            "name": {
-              "title": "Name",
-              "type": "string",
-              "placeholder": "Sensor 1",
-              "required": false
-            },
-            "type": {
-              "title": "Type",
-              "type": "string",
-              "required": false,
-              "enum": [
-                "contact",
-                "motion",
-                "occupancy",
-                "smoke",
-                "temperature",
-                "humidity",
-                "airquality",
-                "light",
-                "leak"
-              ]
-            },
-            "autoRelease": {
-              "title": "Enable Auto Release",
-              "type": "boolean",
-              "required": false
-            },
-            "autoReleaseTime": {
-              "title": "Auto Release Time",
-              "type": "integer",
-              "placeholder": "7500",
-              "required": false
-            }
-          }
-        }
-      },
       "switches": {
         "type": "array",
         "title": "Switches",
