@@ -159,7 +159,7 @@ Example config.json:
 ```
     {
     	"platforms": [{
-    		"platform": "HttpWebHooks",
+    		"platform": "Discord",
     		"webhook_port": "51828",
     		"webhook_listen_host": "::",
     		"webhook_enable_cors": true, 
@@ -195,7 +195,7 @@ Example config.json:
     			"name": "Stateless Switch 1",
     			"buttons": [ 
     				{
-    					"name": "Buttonq", 
+    					"name": "Button1", 
     					"double_press": false,
     					"long_press": false
     				}
